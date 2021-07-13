@@ -8,6 +8,7 @@ export default class EmojiResultsRow extends PureComponent {
     symbol: PropTypes.string
   };
 
+  // 这里使用this.props.具体属性来接收EmojiResults传过来的结果
   render() {
     const codePointHex = this.props.symbol.codePointAt(0).toString(16);
     const src = `//cdn.jsdelivr.net/emojione/assets/png/${codePointHex}.png`;
